@@ -1,6 +1,6 @@
 # Student Management System
 
-![Application Screenshot](/Student-Management-System.png)
+![Application Screenshot](/Student-Management-Application.png)
 
 
 A full-stack Student Management System built with React.js for the frontend and Spring Boot for the backend.
