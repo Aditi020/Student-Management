@@ -1,0 +1,207 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Utility classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Focus styles */
+/* .focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+} */
+
+/* Button hover effects */
+/* .btn-hover {
+  @apply transition-all duration-200 ease-in-out;
+} */
+
+.btn-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card hover effects */
+/* .card-hover {
+  @apply transition-all duration-300 ease-in-out;
+} */
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Loading spinner */
+.spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Table row hover effect */
+/* .table-row-hover {
+  @apply transition-colors duration-150 ease-in-out;
+}
+
+.table-row-hover:hover {
+  @apply bg-gray-50 dark:bg-gray-700;
+} */
+
+/* Form input focus effect */
+/* .input-focus {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.input-focus:focus {
+  @apply ring-2 ring-blue-500 ring-offset-2 border-transparent;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+} */
+
+/* Modal backdrop */
+.modal-backdrop {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Toast notification styles */
+.toast-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.toast-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s ease-out;
+}
+
+.toast-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.toast-exit-active {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .mobile-only {
+    display: none;
+  }
+}
