@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { StudentProvider } from './context/StudentContext';
 import Dashboard from './pages/Dashboard';
 import StudentDetail from './pages/StudentDetail';
@@ -11,7 +11,7 @@ function App() {
     <StudentProvider>
       <Router>
         <div className="app">
-          {/* Use Routes, not Switch */}
+          {/* Routing */}
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/add-student" element={<StudentForm />} />
