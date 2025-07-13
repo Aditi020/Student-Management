@@ -1,0 +1,10 @@
+{
+    "buildCommand": "npm run build",
+    "installCommand": "npm install",
+    "outputDirectory": "dist",
+    "framework": "vite",
+    "functions": {},
+    "routes": [],
+    "env": {},
+    "nodeVersion": "20.x"
+}
